@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 #ifdef VERBOSE
     printf("save ensemble mean to  %s\n", argv[argc-2]);
 #endif
-    f = fopen(argv[argc-2], (r!=0)? "wb+": "wb");
+    f = fopen(argv[argc-2], (r!=0)? "ab": "wb");
 #ifdef SWAPENDIAN
 #ifdef VERBOSE
     printf("calling eno_endian_swap_float\n");
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
 #ifdef VERBOSE
     printf("save variance to  %s\n", argv[argc-1]);
 #endif
-    f = fopen(argv[argc-1], (r!=0)? "wb+": "wb");
+    f = fopen(argv[argc-1], (r!=0)? "ab": "wb");
 #ifdef SWAPENDIAN
 #ifdef VERBOSE
     printf("calling eno_endian_swap_float\n");
